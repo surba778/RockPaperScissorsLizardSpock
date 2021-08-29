@@ -9,34 +9,41 @@
     <title>Rock Paper Scissors Lizard Spock Game</title>
   </head>
   <body>
-    
-    <div class="wrapper">
+    <!-- Header starts here-->
+    <header>
       <h1>Rock Paper Scissors Lizard Spock Game</h1>
+      <!-- score card panel -->
       <div class="scoreboard"> 
           <div class="score">
               <p>SCORE</p>
               <h2> 0 </h2>
           </div>
       </div>
+      </header>
+      <!-- section starts here-->
+      <Section>
+        <div class="wrapper">
       <h3 id="gameOver" class="game-over display-none">Game is over </h3>
+      <!-- images for user to click-->
       <div class="hands" id="handContainer">
             <div class="hand paper">
-              <img src="assets/images/Paper.png" onclick="pickUserHand('paper')" alt=""/>
+              <img src="assets/images/Paper.png" onclick="pickUserHand('paper')" alt="Paper" />
             </div>
             <div class="hand scissors">
-              <img src="assets/images/Scissors.png" onclick="pickUserHand('scissors')" alt=""/>
+              <img src="assets/images/Scissors.png" onclick="pickUserHand('scissors')" alt="Scissors" />
             </div>
             <div class="hand rock">
-              <img src="assets/images/Rock.png" onclick="pickUserHand('rock')" alt=""/>
+              <img src="assets/images/Rock.png" onclick="pickUserHand('rock')" alt="Rock" />
             </div>
             <div class="hand lizard">
-                <img src="assets/images/Lizard.png" onclick="pickUserHand('lizard')" alt=""/>
+                <img src="assets/images/Lizard.png" onclick="pickUserHand('lizard')" alt="Lizard" />
             </div>
             <div class="hand spock">
-                <img src="assets/images/Spock.png" onclick="pickUserHand('spock')" alt=""/>
+                <img src="assets/images/Spock.png" onclick="pickUserHand('spock')" alt="Spock" />
             </div>
       </div>
-      <div class="contest" id="contest">       
+      <!-- panel for result -->
+      <div class="contest" id="contest">
         <div class="user-hand">
             <h2>YOU</h2>
             <div class="handImageContainer">
@@ -51,10 +58,13 @@
             <h2>BOT</h2>
             <div class="handImageContainer">
               <img id="computerPickImage" src="assets/images/Paper.png" alt=""/>
-            </div>   
-        </div>       
-      </div>        
+            </div>
+            </div>
+            </div>
     </div>
+  </Section>
+  <!-- footer starts here -->
+  <Footer>RockPaperScissorsLizardSpock</Footer>
     <script src="assets/js/index.js"></script>
   </body>
 </html>
