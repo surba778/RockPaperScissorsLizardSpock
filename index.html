@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Rock Paper Scissors Lizard Spock Game</title>
+  </head>
+  <body>
+    
+    <div class="wrapper">
+      <h1>Rock Paper Scissors Lizard Spock Game</h1>
+      <div class="scoreboard"> 
+          <div class="score">
+              <p>SCORE</p>
+              <h2> 0 </h2>
+          </div>
+      </div>
+      <h3 id="gameOver" class="game-over display-none">Game is over </h3>
+      <div class="hands" id="handContainer">
+            <div class="hand paper">
+              <img src="assets/images/Paper.png" onclick="pickUserHand('paper')" alt=""/>
+            </div>
+            <div class="hand scissors">
+              <img src="assets/images/Scissors.png" onclick="pickUserHand('scissors')" alt=""/>
+            </div>
+            <div class="hand rock">
+              <img src="assets/images/Rock.png" onclick="pickUserHand('rock')" alt=""/>
+            </div>
+            <div class="hand lizard">
+                <img src="assets/images/Lizard.png" onclick="pickUserHand('lizard')" alt=""/>
+            </div>
+            <div class="hand spock">
+                <img src="assets/images/Spock.png" onclick="pickUserHand('spock')" alt=""/>
+            </div>
+      </div>
+      <div class="contest" id="contest">       
+        <div class="user-hand">
+            <h2>YOU</h2>
+            <div class="handImageContainer">
+              <img id="userPickImage" src="assets/images/Paper.png" alt="">
+            </div>
+        </div>
+        <div class="result"> 
+            <div class="decision"><h1> YOU WIN! </h1></div>
+            <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+        <div class="bot-hand">
+            <h2>BOT</h2>
+            <div class="handImageContainer">
+              <img id="computerPickImage" src="assets/images/Paper.png" alt=""/>
+            </div>   
+        </div>       
+      </div>        
+    </div>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>
