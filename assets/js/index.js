@@ -36,9 +36,8 @@ const pickBotHand = (hand) => {
   let hands = ["rock", "paper", "scissors", "lizard", "spock"];
   let botHand = hands[Math.floor(Math.random() * hands.length)];
 
-  // set computer image 
+  // set computer image
   document.getElementById("computerPickImage").src = handOptions[botHand];
-
   result(hand, botHand);
 };
 
@@ -118,7 +117,7 @@ const restartGame = () => {
 
 // for decsion making
 const setDecision = (decision) => {
-  document.querySelector(".decision h1").innerText = decision;
+  document.querySelector(".decision h3").innerText = decision;
 };
 
 // setting score
