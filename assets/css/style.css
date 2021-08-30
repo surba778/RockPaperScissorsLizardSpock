@@ -3,173 +3,171 @@
 ----------------------------------------------------------------*/
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: sans-serif;
-    color: #fff;
-    background-color: #555;
-  }
-  
-  /* 
-  -------------------------------------------------------------------------------
-  HTML elements 
-  -------------------------------------------------------------------------------
-  */
-  header,footer{
-     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width:100%
-  }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 70vh;
-    background: #555;
-  }
-  
-  .scoreboard {
-    width: 700px;
-    height: 150px;
-    border-radius: 15px;
-    border: 1px solid white;
-    display: flex; 
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 50px;
-    color: rgb(224, 224, 224);
-  }
-  
-  .title {
-    padding-left: 30px;
-  }
-  
-  .score {
-    width: 150px;
-    height: 114px;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 8px;
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .score h2 {
-    color: #565468;
-    font-size: 50px;
-    font-family: sans-serif;
-  }
-  
-  .score p {
-    color: #2a45c2;
-    font-size: 25px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 19px;
-    letter-spacing: 2.5px;
-    text-align: left;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .hands {
-    background: url("assets/images/triangle.png") no-repeat center;
-    opacity: 1;
-    width: 476px;
-    height: 430px;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+body {
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #555;
+}
 
-  .hands img {
-    width: 200px;
-    height: 200px;
-    display: block;
-  }
-  
-  .hands .paper {
-    margin-right: 20px;
-  }
-  
-  .hands .scissors {
-    margin-left: 20px;
-  }
-  
-  .hands .hand {
-    cursor: pointer;
-    transition: all 0.25s;
-  }
-  
-  .hands .hand:hover {
-    transform: translate3d(0px, -8px, 0px);
-  }
-  
-  .contest {
-    display: none;
-    margin-top: 50px;
-    width: 900px;
-  }
-  
-  .contest img {
-    width: 275px;
-    height: 275px;
-  }
-  
-  .contest > div {
-    flex: 1;
-  }
-  
-  .contest h2 {
-    color: white;
-    font-size: 20px;
-  	margin: 20px 0;
-    text-align: center;
-  }
-  
-  .contest .newGame {
-    color: hsl(229, 25%, 31%);
-    background-color: white;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  
-  .newGame:hover {
-    background: rgb(218, 218, 218);
-    transform: translate3d(0px, -2px, 0px);
-  }
-  
-  .contest .handImageContainer {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .result {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .result h1 {
-    font-size: 45px;
-    color: white;
-  }
-  
-  .bot-hand {
-    display: flex;
-    flex-direction: column;
-  }
-  .display-none{display:none !important}
-  .display-block{display:block}
-  .game-over{color:#fff; font-size: 32px;}
+/*
+-------------------------------------------------------------------------------
+HTML elements
+-------------------------------------------------------------------------------
+*/
+header,footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  background: #555;
+}
+
+.scoreboard {
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+  color: rgb(224, 224, 224);
+}
+
+.title {
+  padding-left: 30px;
+}
+
+.score {
+  width: 150px;
+  height: 114px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.score h2 {
+  color: #565468;
+  font-size: 50px;
+  font-family: sans-serif;
+}
+
+.score p {
+  color: #2a45c2;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 2.5px;
+  text-align: left;
+}
+
+.hands {
+  background: url("../images/triangle.png") no-repeat center;
+  opacity: 1;
+  width: 250px;
+  height: 250px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hands img {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.hands .paper {
+  margin-right: 20px;
+}
+
+.hands .scissors {
+  margin-left: 20px;
+}
+
+.hands .hand {
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.hands .hand:hover {
+  transform: translate3d(0px, -8px, 0px);
+}
+
+.contest {
+  display: none;
+  margin-top: 50px;
+  width: 900px;
+}
+
+.contest img {
+  width: 150px;
+  height: 150px;
+}
+
+.contest > div {
+  flex: 1;
+}
+
+.contest h2 {
+  color: white;
+  font-size: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.contest .newGame {
+  color: hsl(229, 25%, 31%);
+  background-color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.newGame:hover {
+  background: rgb(218, 218, 218);
+  transform: translate3d(0px, -2px, 0px);
+}
+
+.contest .handImageContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result h1 {
+  font-size: 45px;
+  color: white;
+}
+
+.bot-hand {
+  display: flex;
+  flex-direction: column;
+}
+.display-none{display:none !important}
+.display-block{display:block}
+.game-over{color:#fff; font-size: 32px;}
